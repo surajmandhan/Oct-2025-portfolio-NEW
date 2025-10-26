@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Curriculum vitae - Suraj Parkash Mandhan</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    /* GENERAL */
+    *{
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      font-family: Roboto, Arial, sans-serif;
+      font-weight: 300;
+      font-size: .9rem;
+      line-height: 1.5;
+    }
+
+    a{
+      text-decoration: none;
+      color: #4472C4;
+    }
+
+    a:hover{
+      text-decoration: underline;
+    }
+
+    p{
+      margin: 0 0 1rem;
+    }
+
+    h1{
+      margin: 0 0 1rem;
+      font-size: 2.5rem;
+      margin-bottom: .5rem;
+    }
+
+    h2{
+      margin: 0 0 1rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .text-blue{
+      color: #4472C4;
+    }
+
+    .text-darkblue{
+      color: #002060;
+    }
+
+    .text-uppercase{
+      text-transform: uppercase; 
+    }
+
+    .icon{
+      margin-right: .5rem;
+    }
+
+    .cv-container{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "left-column right-column right-column";
+      width: 1200px;
+      margin: 100px auto;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }
+
+    .section{
+      margin-bottom: 1.5rem;
+    }
+
+    /* LEFT COLUMN */
+    .left-column{
+      grid-area: left-column;
+      padding: 50px;
+      background-color: #4472C4;
+      color: white;
+    }
+
+    .portait{
+      border-radius: 50%;
+      max-width: 150px;
+      margin: auto;
+      display: block;
+      margin-bottom: 50px;
+    }
+
+    .skills{
+      list-style-type: none;
+      padding: 0;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      margin: 0 0 1rem;
+    }
+
+    /* RIGHT COLUMN */
+    .right-column{
+      grid-area: right-column;
+      display: grid;
+      grid-template-rows: 250px 1fr;
+      grid-template-areas: 
+        "header"
+        "content";
+    }
+
+    /* HEADER */
+    .header{
+      grid-area: header;
+      padding: 50px;
+      background-color: #F2F2F2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .infos{
+      columns: 2;
+      list-style-type: none;
+      padding: 0;
+    }
+
+    /* CONTENT */
+    .content{
+      grid-area: content;
+      padding: 50px;
+    }
+
+    .experience-list{
+      list-style-type: circle;
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      
+      .cv-container {
+        margin: 0;
+        box-shadow: none;
+        width: 100%;
+      }
+      
+      .left-column {
+        background-color: #4472C4 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      
+      .header {
+        background-color: #F2F2F2 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+    <div class="cv-container">
+      <div class="left-column">
+        <img class="portait" src="/images/My Profile/suraj.png" alt="Suraj Parkash Mandhan" />
+        <div class="section">
+          <p>
+            <i class="icon fab fa-linkedin text-darkblue"></i> <a href="https://in.linkedin.com/in/suraj-parkash-mandhan-556a61246" target="_blank" style="color: white; text-decoration: none;">suraj-parkash-mandhan</a>
+          </p>
+        </div>
+        <div class="section">
+          <h2>About Me</h2>
+          <p>
+            <strong>Full Stack Development</strong> is my passion: I love creating modern interfaces, making them responsive and bringing them to life with elegant animations. My core technologies are <strong>React</strong> and <strong>Node.js</strong>, which I've been using for over 3 years. I'm also proficient in <strong>MongoDB</strong>, <strong>Express.js</strong>, and modern web technologies.
+          </p>
+          <p>
+            Being resourceful and independent in my work, I enjoy learning new technologies, spending time solving problems and creating quality code. My work values: clean code, flexibility, performance and professionalism.
+          </p>
+        </div>
+        <div class="section">
+          <h2>Skills</h2>
+          <ul class="skills">
+            <li><i class="icon fas fa-check-circle text-darkblue"></i> <strong>React &#124; JavaScript</strong></li>
+            <li><i class="icon fas fa-check-circle text-darkblue"></i> <strong>Node.js &#124; Express.js</strong></li>
+            <li><i class="icon fas fa-check-circle text-darkblue"></i> <strong>HTML5 &#124; CSS3 &#124; SASS</strong></li>
+            <li><i class="icon fas fa-check-circle text-darkblue"></i> <strong>TypeScript</strong></li>
+            <li><i class="icon fas fa-check-circle text-darkblue"></i> <strong>MongoDB &#124; MySQL</strong></li>
+            <li><i class="icon fas fa-check-circle text-darkblue"></i> <strong>npm &#124; Vite &#124; Webpack</strong></li>
+            <li><i class="icon fas fa-check-circle text-darkblue"></i> <strong>Git &#124; GitHub</strong></li>
+            <li><i class="icon fas fa-check-circle text-darkblue"></i> <strong>UI/UX Design</strong></li>
+            <li><i class="icon fas fa-check-circle text-darkblue"></i> <strong>Responsive Design</strong></li>
+            <li><i class="icon fas fa-check-circle text-darkblue"></i> <strong>API Development</strong></li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>Languages</h2>
+          <p>
+            Hindi, Native language
+            <br>
+            English, Professional proficiency
+            <br>
+            Punjabi, Conversational
+          </p>
+        </div>
+        <div class="section">
+          <h2>Interests</h2>
+          <p>
+            Web Development & Programming
+            <br>
+            UI/UX Design
+            <br>
+            Technology & Innovation
+            <br>
+            Music & Art
+            <br>
+            Continuous Learning
+          </p>
+        </div>
+      </div>
+      <div class="right-column">
+        <div class="header">
+          <h1>Suraj Parkash <span class="text-blue text-uppercase">Mandhan</span></h1>
+          <p>Full Stack Developer</p>
+          <ul class="infos">
+            <li><i class="icon fas fa-at text-blue"></i> <a href="mailto:suraj@example.com">suraj@example.com</a></li>
+            <li><i class="icon fas fa-phone text-blue"></i> +91 98765 43210</li>
+            <li><i class="icon fas fa-map-marker-alt text-blue"></i> Delhi, India</li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="section">
+            <h2>Professional <br><span class="text-blue">Experience</span></h2>
+            <p>
+              <strong>2022 <i class="fas fa-long-arrow-alt-right"></i> Present</strong>
+              <br>
+              Full Stack Developer at <em>Tech Solutions Pvt Ltd</em>
+            </p>
+            <ul class="experience-list">
+              <li>Developed responsive web applications using React, Node.js, and MongoDB</li>
+              <li>Created modern user interfaces with HTML5, CSS3, and JavaScript</li>
+              <li>Implemented RESTful APIs and database integration</li>
+              <li>Collaborated with design teams to implement UI/UX designs</li>
+              <li>Optimized application performance and user experience</li>
+              <li>Worked with version control systems (Git, GitHub)</li>
+              <li>Participated in agile development methodologies</li>
+              <li>Mentored junior developers and conducted code reviews</li>
+            </ul>
+          </div>
+          <div class="section">
+            <p>
+              <strong>2021 <i class="fas fa-long-arrow-alt-right"></i> 2022</strong>
+              <br>
+              Frontend Developer at <em>Digital Agency</em>
+            </p>
+            <ul class="experience-list">
+              <li>Developed responsive websites and web applications</li>
+              <li>Implemented modern CSS frameworks and JavaScript libraries</li>
+              <li>Collaborated with backend developers for API integration</li>
+            </ul>
+          </div>
+          <div class="section">
+            <h2>Education <br><span class="text-blue">& Training</span></h2>
+            <p>
+              <strong>2018 <i class="fas fa-long-arrow-alt-right"></i> 2022</strong>
+              <br>
+              <em>Bachelor of Technology in Computer Science</em>, Graduated, Delhi University
+            </p>
+            <p>
+              <strong>2021</strong>
+              <br>
+              <em>Full Stack Web Development Bootcamp</em>, Online Certification
+            </p>
+            <p>
+              <strong>2020</strong>
+              <br>
+              <em>React.js Advanced Course</em>, Udemy Certification
+            </p>
+          </div>
+          <div class="section">
+            <h2>Projects <br><span class="text-blue">& Achievements</span></h2>
+            <p>
+              <strong>E-commerce Platform</strong> - Full-stack application with React, Node.js, and MongoDB
+              <br>
+              <strong>Portfolio Website</strong> - Responsive design with modern animations
+              <br>
+              <strong>Task Management App</strong> - Real-time collaboration features
+              <br>
+              <strong>API Development</strong> - RESTful services for mobile and web applications
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Suraj Portfolio</title>
+      <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌻</text></svg>">
+      <script>
+        // Dynamic favicon functionality
+        let isTabVisible = true;
+        let favicon = document.querySelector('link[rel="icon"]');
+        
+        // Default favicon
+        const defaultFavicon = 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌻</text></svg>';
+        const tabChangeFavicon = 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🙏</text></svg>';
+        
+        // Set default favicon
+        favicon.href = defaultFavicon;
+        
+        // Listen for tab visibility changes
+        document.addEventListener('visibilitychange', function() {
+          if (document.hidden) {
+            // Tab is hidden - show comeback favicon
+            favicon.href = tabChangeFavicon;
+            document.title = 'Comeback';
+            isTabVisible = false;
+          } else {
+            // Tab is visible - show default favicon
+            favicon.href = defaultFavicon;
+            document.title = 'Suraj Portfolio';
+            isTabVisible = true;
+          }
+        });
+        
+        // Listen for window focus/blur events
+        window.addEventListener('blur', function() {
+          favicon.href = tabChangeFavicon;
+          document.title = 'Comeback';
+          isTabVisible = false;
+        });
+        
+        window.addEventListener('focus', function() {
+          favicon.href = defaultFavicon;
+          document.title = 'Suraj Portfolio';
+          isTabVisible = true;
+        });
+      </script>
+    </head>
+
+    <body>
+      <div id="root"></div>
+      <script type="module" src="/src/main.tsx"></script>
+    </body>
+  </html>
+  
